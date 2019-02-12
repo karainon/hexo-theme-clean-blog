@@ -1,18 +1,17 @@
 # Header
 menu:
   Home: /
-  Archives: /archives
+  Articles: /archives
   Tags: /tags
-  Categories: /categories
   Github:
-    url: https://github.com/klugjo/hexo-theme-clean-blog
+    url: https://github.com/karainon
     icon: github
 
 # Title on top left of menu. Leave empty to use main blog title
-menu_title: Configurable Title
+menu_title: "ALL IN ONE"
 
 # URL of the Home page image
-index_cover: http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg
+index_cover: http://image.aollio.com/img/home-bg.jpg
 
 # Default post title
 default_post_title: Untitled
@@ -34,13 +33,13 @@ google_analytics:
 addthis:
 
 # set your own favicon
-favicon:
+favicon: /favicon.ico
 
 # Social Accounts
 twitter_url:
 twitter_handle:
 facebook_url:
-github_url: https://github.com/klugjo/hexo-theme-clean-blog
+github_url: https://github.com/karainon
 gitlab_url:
 linkedin_url:
 mailto:

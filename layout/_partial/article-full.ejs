@@ -9,19 +9,27 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
                     <h1><%- item.title || theme.default_post_title || "Untitled" %></h1>
+
                     <% if (item.subtitle && item.subtitle.length) { %>
-                    <h2 class="post-subheading">
-                        <%- item.subtitle %>
-                    </h2>
+                        <h2 class="post-subheading">
+                            <%- item.subtitle %>
+                        </h2>
                     <% } %>
+
+                    <span>
+                      总 <span class="post-count"><%= wordcount(item.content) %></span> 字，
+                      约 <span class="post-count"><%= min2read(item.content) %></span> 分钟
+                    </span>
+
                     <span class="meta">
                         <!-- Date and Author -->
                         <% if(item.author) { %>
                             Posted by <%- item.author %> on
                         <% } %>
                         <% if(item.date) { %>
-                            <%= item.date.format(config.date_format) %>
+                            <%- item.date.format(config.date_format) %>
                         <% } %>
+
                     </span>
                 </div>
             </div>
@@ -57,6 +65,7 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
                 <%- item.content %>
 
                 <% if(theme.addthis) { %>
